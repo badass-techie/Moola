@@ -1,4 +1,5 @@
 export const environment = {
+  production: true,
   firebase: {
     "projectId": "moola-d6b51",
     "appId": "1:1066421119992:web:bc253a27a30a9320cd040d",
