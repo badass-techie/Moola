@@ -30,8 +30,8 @@ export class TransferService {
           amount: transferRequest.amount
         };
 
-        await fromRef.update({ balance: fromBalance - transferRequest.amount });
-        await toRef.update({ balance: toBalance + transferRequest.amount });
+        await fromRef.update({ balance: Number(fromBalance) - Number(transferRequest.amount) });
+        await toRef.update({ balance: Number(toBalance) + Number(transferRequest.amount) });
 
         // Get references to the 'transactions' documents for the sender and receiver
         const fromTransactionsRef = this.firestore.collection('transactions').doc(transferRequest.from.email);
