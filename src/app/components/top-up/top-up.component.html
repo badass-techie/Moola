@@ -1,0 +1,7 @@
+<form [formGroup]="topUpForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Amount</mat-label>
+    <input matInput formControlName="amount" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="topUpForm.invalid">Top Up</button>
+</form>

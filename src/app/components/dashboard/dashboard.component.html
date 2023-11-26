@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <div class="user-details">
+    <span>{{ user?.username }}</span>
+    <span>Balance: {{ user?.balance }}/=</span>
+  </div>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="authService.logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+<br/>
+<b>Transaction History:</b>
+<mat-table [dataSource]="transactions">
+  <ng-container matColumnDef="from">
+    <mat-header-cell *matHeaderCellDef> From </mat-header-cell>
+    <mat-cell *matCellDef="let transaction"> {{transaction.from.username}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="to">
+    <mat-header-cell *matHeaderCellDef> To </mat-header-cell>
+    <mat-cell *matCellDef="let transaction"> {{transaction.to.username}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="amount">
+    <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+    <mat-cell *matCellDef="let transaction"> {{transaction.amount}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<div *ngIf="transactions.length === 0" class="empty-state">
+  <span>Nothing here but crickets ¯\_(ツ)_/¯</span>
+</div>
+<button mat-fab color="primary" class="fab-left" (click)="openTopUp()"><mat-icon>arrow_downward</mat-icon> Top Up</button>
+<button mat-fab color="accent" class="fab-right" (click)="openTransfer()"><mat-icon>money</mat-icon> Send</button>

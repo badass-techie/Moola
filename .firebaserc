@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "moola-d6b51": {
+      "hosting": {
+        "Moola": [
+          "moola-d6b51"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "moola-d6b51"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Moola",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

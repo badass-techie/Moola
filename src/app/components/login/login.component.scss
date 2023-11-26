@@ -1,0 +1,19 @@
+div {
+  height: 100vh;
+
+  mat-card {
+    max-height: 80vh;
+    width: 90%;
+    max-width: 600px;
+
+    .illustration {
+      max-width: 60%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  }
+}

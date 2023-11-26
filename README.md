@@ -1,14 +1,45 @@
 # Moola
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+A financial application that allows users to top up and transfer money between users.
 
-## Development server
+## Pages and Functionalities
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Sign Up
 
-## Code scaffolding
+The **Sign Up** page allows new users to create an account. After successful registration, users are redirected to the login page. ![Sign Up Page](./screenshots/signup.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Log In
+
+The **Log In** page allows users to access their account by entering their email and password. Upon successful login, users are redirected to the dashboard. ![Log In Page](./screenshots/login.png)
+
+### Dashboard
+
+The **Dashboard** page displays the current user's username and balance on the toolbar. It also shows a table of the user's transaction history, including the sender, receiver, and amount of each transaction. ![Dashboard Page](./screenshots/dashboard.png)
+
+There are two Floating Action Buttons (FABs) on the Dashboard page:
+
+1. **Top Up**: Opens a bottom sheet with a form for users to top up their account balance.
+2. **Transfer**: Opens a bottom sheet with a form for users to transfer money to other users. The form includes an autocomplete field for the receiver's email or phone number.
+
+### Top Up
+
+The **Top Up** form allows users to top up their account balance. ![Top Up Form](./screenshots/topup.png)
+
+### Transfer
+
+The **Transfer** form in the bottom sheet allows users to transfer money to other users either via their emails or phone numbers. ![Transfer Form](./screenshots/send.png)
+
+## Technical Tools Used
+
+- **Angular**: A platform for building web applications.
+- **Angular Material**: A UI component library for Angular.
+- **Firebase**: A backend-as-a-service (BAAS) service.
+
+## Models
+
+## Live Demo
+
+A live demo of the application is available at [https://moola-1.web.app/](https://moola-1.web.app/).
 
 ## Build
 
