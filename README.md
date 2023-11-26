@@ -41,7 +41,7 @@ The **Transfer** form in the bottom sheet allows users to transfer money to othe
 
 ## Live Demo
 
-A live demo of the application is available at [https://moola-1.web.app/](https://moola-d6b51.web.app/).
+A live demo of the application is available at [https://moola-d6b51.firebaseapp.com/](https://moola-d6b51.web.app/).
 
 ## Build
 
